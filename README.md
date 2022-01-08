@@ -1,11 +1,12 @@
-# Startpage `V1.0`
+# Startpage `V1.1`
+
 Custom startpage for your browser.
 
 Very simple. HTML + CSS and a bit of JS. Lot of space for links.<br>
-Features a clock, some button shenanigans and a randomized motd (message of the day).  
+Features a clock, some button shenanigans and a randomized motd (message of the day).
 
 Html should be easy to understand and to change.
-The css has some global values to make your life a bit easier customizing it. 
+The css has some global values to make your life a bit easier customizing it.
 
 ![preview](/preview.gif)
 
@@ -19,4 +20,8 @@ Maybe I'll do that someday. (Same for the gretting / title)
 - Art from [waneella](https://www.pixiv.net/users/6555095)
 
 # Changelog
-/
+
+- **`2021/01/08`** - _V1.1_
+  - Fixed some browser stuff
+- **`2021/01/08`** - _V1.0_
+  - Initial release
