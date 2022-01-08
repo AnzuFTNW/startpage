@@ -10,7 +10,7 @@ The css has some global values to make your life a bit easier customizing it.
 ![preview](https://i.imgur.com/LbNxuNX.png)
 
 The motd.js could relatively easy be refunctioned to change the image on page load.<br>
-Maybe I'll do that someday.
+Maybe I'll do that someday. (Same for the gretting / title)
 
 # Credits
 
