@@ -7,7 +7,7 @@ Features a clock, some button shenanigans and a randomized motd (message of the 
 Html should be easy to understand and to change.
 The css has some global values to make your life a bit easier customizing it. 
 
-![preview](https://i.imgur.com/LbNxuNX.png)
+![preview](/preview.gif)
 
 The motd.js could relatively easy be refunctioned to change the image on page load.<br>
 Maybe I'll do that someday. (Same for the gretting / title)
