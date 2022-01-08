@@ -1,0 +1,215 @@
+/* FONTS */
+@font-face {
+  font-family: "terminess";
+  src: url("terminess.ttf");
+}
+
+/* SETTINGS */
+:root {
+  --total-width: 700px;
+  --total-height: 300px;
+  --image-width: 175px;
+
+  --box-padding: 5px;
+  --box-offset: 12vh;
+
+  --border-color: rgb(34, 34, 38);
+  --border-style: solid;
+  --border-width: 1px;
+
+  --color-background: rgb(17, 17, 21);
+  --color-foreground: rgb(22, 22, 26);
+  --color-text: rgb(204, 204, 204);
+  --color-text-dim: rgb(82, 82, 86);
+  --color-text-hover: rgb(9, 112, 205);
+  --color-highlight: rgb(9, 112, 205);
+  --color-indicator: rgb(66, 204, 0);
+
+  --global-transition: all 0.2s ease;
+}
+
+/* PRE */
+* {
+  box-sizing: border-box;
+}
+ul,
+a,
+p,
+h1,
+a:visited {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+
+/* BOX */
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "terminess", monospace;
+}
+.main {
+  display: flex;
+  width: var(--total-width);
+  height: var(--total-height);
+  column-gap: var(--box-padding);
+}
+.container {
+  display: flex;
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  border-width: var(--border-width);
+  padding: var(--box-padding);
+  background-color: var(--color-foreground);
+}
+
+/* CONTENT */
+.content {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: calc(var(--total-width) - var(--image-width));
+}
+hr {
+  width: 75%;
+  color: var(--border-color);
+  margin: 0;
+}
+.highlight {
+  color: var(--color-highlight);
+}
+
+/* QUOTE */
+.quote {
+  width: 75%;
+}
+.quote > .highlight {
+  font-size: 0.7rem;
+}
+
+/* SEARCH */
+.search {
+  width: 100%;
+}
+.indicator {
+  color: var(--color-indicator);
+}
+.search input {
+  width: 15%;
+  background-color: var(--color-foreground);
+  color: var(--color-text);
+  border: none;
+  transition: all 0.5s ease;
+}
+.search input:focus {
+  width: 50%;
+  background-color: var(--color-highlight);
+  color: var(--color-background);
+  padding: 1px 3px;
+}
+.search:focus-within input::placeholder {
+  opacity: 0;
+}
+.search input:focus-visible {
+  outline-style: none;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+.links {
+  font-size: 0.7rem;
+  text-align: left;
+}
+.links:last-child {
+  border-right-style: none;
+}
+.category {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  border-color: var(--border-color);
+  border-width: var(--border-width);
+  border-bottom-style: var(--border-style);
+}
+.link {
+  color: var(--color-text);
+  transition: var(--global-transition);
+}
+.links:hover,
+.link:hover {
+  color: var(--color-text-hover);
+}
+
+/* IMAGE */
+.image {
+  width: calc(var(--image-width) - 2 * var(--box-padding));
+  height: calc(var(--image-height) - 2 * var(--box-padding));
+  object-fit: cover;
+  object-position: 50%;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: var(--total-width);
+  margin-bottom: var(--box-offset);
+  padding: 0px var(--border-width);
+  color: var(--color-text-dim);
+}
+.button {
+  width: 10px;
+  height: 10px;
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  border-width: var(--border-width);
+  background-color: var(--color-foreground);
+  margin-right: var(--box-padding);
+}
+.button:first-of-type {
+  background-color: var(--color-highlight);
+}
+.button:hover {
+  border-color: var(--color-text-hover);
+  cursor: pointer;
+}
+.motd {
+  margin-left: auto;
+  margin-right: var(--box-padding);
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 10px;
+  font-family: "alagard";
+  color: var(--color-text-dim);
+}
+.footer > .link {
+  padding-right: 9px; /* nerd font icon size fix */
+  color: var(--color-text-dim);
+  font-family: "terminess"; /* apply nerd font icons */
+  transition: var(--global-transition);
+}
+.footer > .link:hover {
+  color: var(--color-text-hover);
+}

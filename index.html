@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome home!</title>
+    <link rel="stylesheet" href="src/normalize.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="icon" href="src/favicon.ico" />
+    <script src="src/clock.js"></script>
+    <script src="src/switch.js"></script>
+    <script src="src/motd.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="main" id="one">
+        <div class="container content">
+          <h1 class="header"><span class="highlight">Welcome home!</span></h1>
+          <p class="quote">
+            "I live life every day hoping I was a slightly kinder person than I
+            was the day before.” <br />
+            <span class="highlight">- 牧之原翔子 -</span>
+          </p>
+          <hr />
+          <form
+            action="https://www.google.com/search"
+            method="GET"
+            autocomplete="off"
+            class="search"
+          >
+            <label class="indicator" for="q"></label>
+            <input id="q" name="q" type="search" placeholder="Search.." />
+          </form>
+          <div class="nav">
+            <ul class="links">
+              <p class="category">Frequent</p>
+              <li>
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="link"
+                  >GMail</a
+                >
+              </li>
+              <li>
+                <a href="https://outlook.live.com/mail/0/" class="link"
+                  >Outlook</a
+                >
+              </li>
+              <li>
+                <a href="https://docs.google.com/spreadsheets/u/0/" class="link"
+                  >Sheets</a
+                >
+              </li>
+              <li><a href="https://github.com" class="link">GitHub</a></li>
+            </ul>
+            <ul class="links">
+              <p class="category">Social</p>
+              <li>
+                <a href="https://web.whatsapp.com" class="link">WhatsApp</a>
+              </li>
+              <li><a href="https://twitter.com" class="link">Twitter</a></li>
+              <li>
+                <a href="https://www.instagram.com" class="link">Instagram</a>
+              </li>
+              <li><a href="https://www.reddit.com" class="link">Reddit</a></li>
+            </ul>
+            <ul class="links">
+              <p class="category">Media</p>
+              <li>
+                <a href="https://www.youtube.com" class="link">YouTube</a>
+              </li>
+              <li><a href="https://www.twitch.tv" class="link">Twitch</a></li>
+              <li>
+                <a href="https://www.netflix.com" class="link">Netflix</a>
+              </li>
+              <li><a href="https://www.pixiv.net" class="link">Pixiv</a></li>
+            </ul>
+            <ul class="links">
+              <p class="category">Anime</p>
+              <li><a href="https://anilist.co" class="link">AniList</a></li>
+              <li>
+                <a href="https://www.crunchyroll.com" class="link"
+                  >Crunchyroll</a
+                >
+              </li>
+              <li><a href="https://www.wakanim.tv" class="link">Wakanim</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <img src="src/images/side2.gif" class="image" />
+        </div>
+      </div>
+      <div class="main" id="two" style="display: none">
+        <div class="container content">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/jnGZDkJhuzM"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="container">
+          <img src="src/images/side1.gif" class="image" />
+        </div>
+      </div>
+      <div class="info">
+        <div
+          class="button"
+          id="btn1"
+          onclick="show('one');hide('two');tog('btn1');toh('btn2');"
+        ></div>
+        <div
+          class="button"
+          id="btn2"
+          onclick="show('two');hide('one');tog('btn2');toh('btn1');"
+        ></div>
+        <div id="time">clock</div>
+        <p class="motd" id="motd">motd</p>
+      </div>
+      <div class="footer">
+        <a href="https://github.com/AnzuFTNW/startpage" class="link"></a>
+      </div>
+    </div>
+  </body>
+  <script>
+    updateClock();
+    randomMotd();
+  </script>
+</html>
